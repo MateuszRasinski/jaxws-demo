@@ -18,6 +18,7 @@
             serviceClass="com.rasinsky.jaxws_demo.service.orders.Orders">
         <jaxws:inInterceptors>
             <ref bean="loggingInInterceptor"/>
+            <ref bean="orderServiceSoapHeaderInInterceptor"/>
         </jaxws:inInterceptors>
         <jaxws:outInterceptors>
             <ref bean="loggingOutInterceptor"/>
@@ -36,6 +37,7 @@
         </jaxws:inInterceptors>
         <jaxws:outInterceptors>
             <ref bean="loggingOutInterceptor"/>
+            <ref bean="orderServiceSoapHeaderOutInterceptor"/>
         </jaxws:outInterceptors>
     </jaxws:client>
 </beans>

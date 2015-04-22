@@ -19,6 +19,10 @@
     <jaxws:endpoint
             id="orders"
             implementor="com.rasinsky.jaxwsdemo.orders.DefaultOrdersEndpoint"
-            address="/services/orders"/>
+            address="/services/orders">
+        <jaxws:inInterceptors>
+            <ref bean="orderServiceSoapHeaderInInterceptor"/>
+        </jaxws:inInterceptors>
+    </jaxws:endpoint>
           
 </beans>
